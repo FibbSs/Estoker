@@ -1,28 +1,34 @@
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+
 /**
  *
- * @author FibbS
+ * @author Elias Neto
  */
 public class Usuario {
-    private String nome;
     private String login;
     private String senha;
-    private String tipo;
-    private String cpf;   
-
-    public String getNome() {
-        return nome;
+    private String cpf;
+    private boolean adm; // True se a pessoa tiver privilégios administrativo.
+    
+    public Usuario(String login, String senha, String cpf, Boolean adm){
+    this.login = login;
+    this.senha = senha;
+    this.cpf = cpf;
+    this.adm = adm;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Usuario() {
     }
-
+    
+    //Getters e setters :
+    
     public String getLogin() {
         return login;
     }
@@ -38,15 +44,7 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
+    
     public String getCpf() {
         return cpf;
     }
@@ -54,4 +52,13 @@ public class Usuario {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public boolean isAdm() {
+        return adm;
+    }
+
+    public void setAdm(boolean adm) {
+        this.adm = adm;
+    }
+    
 }
